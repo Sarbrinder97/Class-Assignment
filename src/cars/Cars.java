@@ -13,14 +13,14 @@ import java.time.LocalDate;
  */
 public class Cars {
     String make, model, features;
-    LocalDate year;
+    int year;
     double mileage, price;
 
     public Cars(String make, String model, String features, LocalDate year, double mileage, double price){
         this.make = make;
         this.features = features;
         this.model = model;
-        this.year = year;
+        setYear(year);
         this.mileage = mileage;
         this.price = price;
     }
@@ -49,12 +49,12 @@ public class Cars {
         this.features = features;
     }
 
-    public LocalDate getYear() {
-        return year;
+    public int getYear() {
+         return year;
     }
 
     public void setYear(LocalDate year) {
-        this.year = year;
+        this.year = year.getYear();
     }
 
     public double getMileage() {
